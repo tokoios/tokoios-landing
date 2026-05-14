@@ -45,19 +45,6 @@ export default function Home() {
     { name: "InvoiceKit", category: "SaaS • Dashboard", color: "bg-emerald-900" },
   ];
 
-  // Render placeholder saat SSR untuk hindari hydration mismatch
-  if (!isClient) {
-    return (
-      <div className="min-h-screen bg-black text-white">
-        <div className="pt-40 pb-24 px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Loading...
-          </h1>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen bg-black text-white font-sans selection:bg-lime-400 selection:text-black">
       {/* NAVBAR */}
