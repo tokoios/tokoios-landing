@@ -6,11 +6,8 @@ import { ArrowRight, CheckCircle, Code, Smartphone, Zap, Menu, X } from "lucide-
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [isClient, setIsClient] = useState(false);
-
+  
   useEffect(() => {
-    setIsClient(true);
-    
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
