@@ -77,23 +77,14 @@ export default function Home() {
   <a href="#services" className="hover:text-lime-400 transition">Layanan</a>
   <a href="#portfolio" className="hover:text-lime-400 transition">Portfolio</a>
   <a href="#process" className="hover:text-lime-400 transition">Proses</a>
-  
-  <div className="flex items-center gap-3">
-    <a 
-      href={whatsappLink} 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="bg-lime-400 text-black px-5 py-2.5 rounded-full font-semibold hover:bg-lime-300 transition flex items-center gap-2"
-    >
-      Konsultasi WA <ArrowRight size={16} />
-    </a>
-    <a 
-      href="mailto:hello@tokoios.com" 
-      className="border border-white/20 px-5 py-2.5 rounded-full font-semibold hover:bg-white/5 transition flex items-center gap-2"
-    >
-      Email Kami <ArrowRight size={16} />
-    </a>
-  </div>
+  <a 
+    href={whatsappLink} 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="bg-lime-400 text-black px-5 py-2.5 rounded-full font-semibold hover:bg-lime-300 transition flex items-center gap-2"
+  >
+    Konsultasi WA <ArrowRight size={16} />
+  </a>
 </div>
           
           <button 
