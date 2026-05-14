@@ -1,17 +1,45 @@
 "use client";
 
-import { FileText, Plus, Download, Search, MoreVertical, DollarSign, TrendingUp, Users } from "lucide-react";
 import { useState } from "react";
 
 export default function InvoiceKitDemo() {
   const [activeTab, setActiveTab] = useState("dashboard");
+
+  // Icon components
+  const FileTextIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+  );
+  
+  const PlusIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+  );
+  
+  const DownloadIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+  );
+  
+  const SearchIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+  );
+  
+  const MoreVerticalIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+  );
+  
+  const DollarSignIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+  );
+  
+  const UsersIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+  );
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* SIDEBAR */}
       <div className="fixed left-0 top-0 w-64 h-full bg-slate-900 text-white p-6 hidden md:block">
         <div className="flex items-center gap-2 mb-8">
-          <FileText className="text-emerald-400" size={32} />
+          <FileTextIcon />
           <span className="text-xl font-bold">Invoice<span className="text-emerald-400">Kit</span></span>
         </div>
         <nav className="space-y-2">
@@ -43,7 +71,7 @@ export default function InvoiceKitDemo() {
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-bold text-gray-800">Dashboard</h1>
             <button className="bg-emerald-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-emerald-500 transition flex items-center gap-2">
-              <Plus size={20} />
+              <PlusIcon />
               Buat Invoice
             </button>
           </div>
@@ -56,7 +84,7 @@ export default function InvoiceKitDemo() {
             <div className="bg-white p-6 rounded-xl border border-gray-200">
               <div className="flex items-center justify-between mb-4">
                 <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center">
-                  <DollarSign className="text-emerald-600" size={24} />
+                  <DollarSignIcon />
                 </div>
                 <span className="text-green-600 text-sm font-semibold">+12.5%</span>
               </div>
@@ -66,7 +94,7 @@ export default function InvoiceKitDemo() {
             <div className="bg-white p-6 rounded-xl border border-gray-200">
               <div className="flex items-center justify-between mb-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <FileText className="text-blue-600" size={24} />
+                  <FileTextIcon />
                 </div>
                 <span className="text-green-600 text-sm font-semibold">+8.2%</span>
               </div>
@@ -76,7 +104,7 @@ export default function InvoiceKitDemo() {
             <div className="bg-white p-6 rounded-xl border border-gray-200">
               <div className="flex items-center justify-between mb-4">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                  <Users className="text-purple-600" size={24} />
+                  <UsersIcon />
                 </div>
                 <span className="text-green-600 text-sm font-semibold">+15.3%</span>
               </div>
@@ -91,7 +119,7 @@ export default function InvoiceKitDemo() {
               <h2 className="text-lg font-bold text-gray-800 mb-4">Recent Invoices</h2>
               <div className="flex gap-4">
                 <div className="flex-1 relative">
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+                  <SearchIcon />
                   <input 
                     type="text" 
                     placeholder="Search invoices..." 
@@ -99,7 +127,7 @@ export default function InvoiceKitDemo() {
                   />
                 </div>
                 <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition flex items-center gap-2">
-                  <Download size={20} />
+                  <DownloadIcon />
                   Export
                 </button>
               </div>
@@ -133,7 +161,7 @@ export default function InvoiceKitDemo() {
                       </td>
                       <td className="px-6 py-4">
                         <button className="text-gray-400 hover:text-gray-600">
-                          <MoreVertical size={20} />
+                          <MoreVerticalIcon />
                         </button>
                       </td>
                     </tr>
