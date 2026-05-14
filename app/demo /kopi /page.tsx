@@ -1,6 +1,12 @@
 "use client";
 
-import { Coffee, MapPin, Clock, Phone, Instagram, Star } from "lucide-react";
+// Icon components sederhana (tanpa lucide-react)
+const CoffeeIcon = () => <span className="text-2xl">☕</span>;
+const MapPinIcon = () => <span className="text-2xl">📍</span>;
+const ClockIcon = () => <span className="text-2xl">🕐</span>;
+const PhoneIcon = () => <span className="text-2xl">📞</span>;
+const InstagramIcon = () => <span className="text-2xl">📷</span>;
+const StarIcon = () => <span className="text-2xl">⭐</span>;
 
 export default function KopiKenanganDemo() {
   return (
