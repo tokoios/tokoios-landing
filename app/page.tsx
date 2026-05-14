@@ -41,7 +41,7 @@ export default function Home() {
 
   const portfolio = [
   { 
-    name: "Kopi Kenangan", 
+    name: "Kopi Suka2", 
     category: "F&B • Landing Page", 
     color: "bg-amber-900",
     link: "/demo/kopi"  // ← TAMBAHKAN INI
