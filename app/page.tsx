@@ -87,13 +87,18 @@ export default function Home() {
   </a>
 </div>
           
-          <button 
-            className="md:hidden" 
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+<button 
+  className="md:hidden relative z-50 p-2" 
+  onClick={() => {
+    console.log('Menu clicked, current state:', isMenuOpen);
+    setIsMenuOpen(!isMenuOpen);
+  }}
+  aria-label="Toggle menu"
+  aria-expanded={isMenuOpen}
+  type="button"
+>
+  {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+</button>
         </div>
         
         {isMenuOpen && (
