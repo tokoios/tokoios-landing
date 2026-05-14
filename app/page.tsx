@@ -40,10 +40,25 @@ export default function Home() {
   ];
 
   const portfolio = [
-    { name: "Kopi Kenangan", category: "F&B • Landing Page", color: "bg-amber-900" },
-    { name: "BarberPro", category: "Jasa • Website Bisnis", color: "bg-slate-800" },
-    { name: "InvoiceKit", category: "SaaS • Dashboard", color: "bg-emerald-900" },
-  ];
+  { 
+    name: "Kopi Kenangan", 
+    category: "F&B • Landing Page", 
+    color: "bg-amber-900",
+    link: "/demo/kopi"  // ← TAMBAHKAN INI
+  },
+  { 
+    name: "BarberPro", 
+    category: "Jasa • Website Bisnis", 
+    color: "bg-slate-800",
+    link: "/demo/barber"  // ← TAMBAHKAN INI
+  },
+  { 
+    name: "InvoiceKit", 
+    category: "SaaS • Dashboard", 
+    color: "bg-emerald-900",
+    link: "/demo/invoice"  // ← TAMBAHKAN INI
+  },
+];
 
   return (
     <div className="min-h-screen bg-black text-white font-sans selection:bg-lime-400 selection:text-black">
@@ -191,9 +206,10 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {portfolio.map((item, idx) => (
-              <div 
+              <a 
                 key={idx} 
-                className={`rounded-2xl overflow-hidden aspect-[4/3] ${item.color} relative group cursor-pointer`}
+                href={item.link} 
+                className={`rounded-2xl overflow-hidden aspect-[4/3] ${item.color} relative group cursor-pointer block`}
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
                   <span className="text-xs text-lime-400 font-medium mb-1">{item.category}</span>
@@ -202,9 +218,9 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
                   <span className="bg-lime-400 text-black px-4 py-2 rounded-full text-sm font-semibold">Lihat Demo</span>
                 </div>
-              </div>
+              </a>
             ))}
-          </div>
+          </div> 
           <p className="text-center text-gray-500 text-sm mt-8">
             * Demo project untuk showcase.
           </p>
